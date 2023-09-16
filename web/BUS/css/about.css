@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+.section { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 100vh}
+
+section#AAbout { position: relative; background: #fafafa; height: auto; overflow: hidden}
+
+.about-player { position: relative; display: flex;}
+	/*.about-player::before { content: ""; position: absolute; top: -305px; left: -100px; width: 161px; height: 402px; background: url(../img/about_line.svg) 0 0 no-repeat;}*/
+
+	.svg-line { position: absolute; top: -305px; left: -100px; width: 161px; height: 402px;}
+	#Path_27 {
+		stroke-dasharray: 530;
+		stroke-dashoffset: 530;
+	}
+	.svg-line.active #Path_27 { animation: svg-line 1s linear forwards;}
+	@keyframes svg-line {
+		from { stroke-dashoffset: 530; }
+		to { stroke-dashoffset: 0; }
+	}
+
+	#Oval {	cx:0; cy:0; r:0;}
+	.svg-line.active #Oval { animation: svg-dot 0.2s 1s linear forwards;}
+
+	@keyframes svg-dot {
+		from { cx:0; cy:0; r:0;}
+		to { cx:7.5; cy:7.5; r:7.5;}
+	}	
+
+	/*
+	.about-wrap::after { content: ""; position: absolute; top: 76px; left: -31px; display: block; clear: both; width: 15px; height: 15px; background: #d01329; border-radius: 50%; animation: about-dot 0.5s 1s linear forwards; transform: scale(0)}
+	  @keyframes about-dot {
+		from { transform: scale(0)}
+		to { transform: scale(1)}
+	  }
+	*/
+
+	.about-info { width: 500px}
+	.player { width: 520px}
+
+	.about-info h4 { position: relative; font-family: 'Gmarket Sans'; font-size: 55px; font-weight: 700; color: #3c3c3c; letter-spacing: -2.5px; line-height: 61px; margin-bottom: 10px}
+	.about-info h4::after { content: ""; position: absolute; right: -15px; top: 20px; width: 44px; height: 44px; background: url("../img/about_dot.png") 0 0 no-repeat; animation: about-circle 0.5s 1.5s linear infinite alternate; transform: scale(0); opacity: 0}
+	  @keyframes about-circle {
+		from { transform: scale(0.8); opacity: 0.8;}
+		to { transform: scale(1); opacity: 1}
+	  }
+
+	.about-info h4 .small { display: block; font-weight: 300}
+	.about-info h4 strong { color: #d01329; font-weight: 700;}
+	.about-info ul li { position: relative; font-size: 20px; color: #4c4c4c; letter-spacing: -1px; padding-left: 25px}
+	.about-info ul li::before { content: ""; position: absolute; left: 5px; top: 13px; width: 5px; height: 5px; background: #4c4c4c; border-radius: 50%}
+	.about-info ul li:first-child { margin-bottom: 10px}
+
+	.player { padding-top: 140px}
+	.player video { width: 100%; max-width: 520px; height: auto; box-shadow: 3px 1px 77px rgba(0, 0, 0, 0.5); border-radius: 13px;}
+
+#AAbout .section:nth-of-type(2) { background: #464646}
+
+
+
+
+/* =================
+one page scroll
+=================*/
+
+#navigation { position: absolute; bottom: 0; left: 0; width: 100%; height: 125px; background: #fff; z-index: 10}
+#navigation.fix { position: fixed; top: 0}
+#navigation h1 { display: none}
+#navigation ul { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center}
+#navigation ul li { margin: 0 20px}
+
+#intro { width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: darkorange}
+.nav-slider { position: absolute; bottom: 0; width: 0; height: 6px; background: #d01329; transition: left 0.3s ease;}
+
+
+#wrap { display: block}
+section { width: 100%; height: 100vh;}
+#About { background-color: aquamarine}
+#Roadmap { background-color: bisque}
+#Member { background-color: tomato}
+#Partners { background-color: yellowgreen}
+#Wallet { background-color: violet}
+
+
+
+
+
+
+
+
+
+
+

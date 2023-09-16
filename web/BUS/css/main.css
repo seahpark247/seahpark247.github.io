@@ -1,0 +1,368 @@
+@charset "utf-8";
+
+
+/*----------------------------------------
+Common
+----------------------------------------*/
+#wrap { display: block}
+.section { position: relative; width: 100%; height: calc(100vh - 90px); display: flex; align-items: center; justify-content: center; overflow: hidden}
+.section.noflex { display: block}
+
+.svg-line { position: absolute; width: 161px; height: 402px; z-index: 9}
+	.Path_27 { stroke-dasharray: 530; stroke-dashoffset: 530;}
+	.svg-line.active .Path_27 { animation: svg-line 1s linear forwards;}
+	@keyframes svg-line {
+		from { stroke-dashoffset: 530; }
+		to { stroke-dashoffset: 0; }
+	}
+	.Oval {	cx:0; cy:0; r:0;}
+	.svg-line.active .Oval { animation: svg-dot 0.2s 1s linear forwards;}
+	@keyframes svg-dot {
+		from { cx:0; cy:0; r:0;}
+		to { cx:7.5; cy:7.5; r:7.5;}
+	}
+
+
+/*----------------------------------------
+Navigation
+----------------------------------------*/
+#navigation { position: absolute; bottom: 0; left: 0; width: 100%; height: 90px; background: #fff; border-top: 1px solid #cdcbcb; z-index: 10}
+#navigation.fix { position: fixed; top: 0}
+#navigation h1 { position: absolute; left: 50%; top: 50%; font-size: 0; transform: translate(-50%, -50%); margin-left: 18px; z-index: 10}
+#navigation ul { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center}
+#navigation ul li { font-size: 20px; font-weight: 700; margin: 0 45px}
+#navigation ul li:nth-child(4) { margin-left: 150px}
+#navigation ul li a { color: #3b3b3b}
+#navigation ul li:hover a, #navigation ul li a.active { color: #d01329}
+
+.nav-slider { position: absolute; bottom: 0; width: 0; height: 6px; background: #d01329; transition: left 0.3s ease;}
+
+
+/*----------------------------------------
+Intro
+----------------------------------------*/
+#Intro.section { height: 100vh}
+#Intro .Intro-box { padding-bottom: 90px}
+
+#Intro select { position: absolute; top: 2.625rem; left: 50%; width: 4.625rem; height: 1.875rem; font-size: 0.625rem; font-weight: 500; letter-spacing: -0.029rem; color: #3b3b3b; border: solid 1px #3b3b3b; -webkit-appearance: none;
+ -moz-appearance: none; appearance: none; background: url(../img/main_arrow.png) no-repeat 95% 50%; padding: 0 0.938em; margin-left: 580px}
+#Intro select:focus { outline: none;}
+#Intro select::-ms-expand { display: none;}
+
+#Intro .float { margin-bottom: 30px}
+#Intro .float img { display: block; margin: 0 auto;}
+#Intro .float img.item {
+	width: 250px; height: 250px;
+    margin-bottom: 2.5rem;
+    animation: motion 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes motion {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, 40px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(0, 54px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#Intro .float img.shadow {
+	width: 180px; height: 58px;
+    animation: scale 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.4);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.54);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#Intro .main-content {
+    text-align: center;
+}
+
+#Intro .main-content img {
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+#Intro .main-content h2 {
+    font-family: 'Gmarket Sans';
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    color: #3c3c3c;
+    margin-bottom: 30px;
+}
+
+#Intro .main-button {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#Intro .main-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /*height: 4.063rem;*/
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #3b3b3b;
+    border: solid 0.063rem #3b3b3b;
+	padding: 12px 0;
+}
+
+#Intro .main-button a:hover {
+    color: #d01329;
+    border: solid 0.063rem #d01329;
+}
+
+#Intro .main-button>a:first-child {
+	padding: 14px 0;
+    margin-bottom: 15px;
+}
+
+#Intro .main-button h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#Intro ul.app {
+    display: flex;
+}
+
+#Intro ul.app li:first-child {
+    margin-right: 1.25rem;
+	flex:1;
+}
+
+#Intro ul.app li:first-child a::before {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.875rem;
+    background-repeat: no-repeat;
+    background-image: url(../img/main_android.png);
+    margin-right: 0.625rem;
+}
+#Intro ul.app li:first-child a:hover::before {
+    background-image: url(../img/main_android_hover.png);
+}
+#Intro ul.app li:nth-child(2) { flex:1}
+#Intro ul.app li:nth-child(2) a::before {
+    content: '';
+    display: inline-block;
+    width: 1.688rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-image: url(../img/main_ios.png);
+    margin-right: 0.563rem;
+}
+#Intro ul.app li:nth-child(2) a:hover::before {
+    background-image: url(../img/main_ios_hover.png);
+}
+
+/*----------------------------------------
+About
+----------------------------------------*/
+#About { position: relative}
+#About .section.player { background: #fafafa}
+#About .section.key { background: #464646; overflow: visible;}
+.svg-line.about1 { left: 50%; top: -80px; margin-left: -625px}
+.svg-line.about2 { left: 50%; top: -220px; margin-left: -225px}
+
+.about-player { position: relative; display: flex;}
+	.about-info { width: 500px}
+	.about-info h4 { position: relative; font-family: 'Gmarket Sans'; font-size: 55px; font-weight: 700; color: #3c3c3c; letter-spacing: -2.5px; line-height: 61px; margin-bottom: 10px}
+	.about-info h4::after { content: ""; position: absolute; right: -15px; top: 20px; width: 44px; height: 44px; background: url("../img/about_dot.png") 0 0 no-repeat; animation: about-circle 0.5s 1.5s linear infinite alternate; transform: scale(0); opacity: 0}
+	  @keyframes about-circle {
+		from { transform: scale(0.8); opacity: 0.8;}
+		to { transform: scale(1); opacity: 1}
+	  }
+	.about-info h4 .small { display: block; font-weight: 300}
+	.about-info h4 strong { color: #d01329; font-weight: 700;}
+	.about-info ul li { position: relative; font-size: 20px; color: #4c4c4c; letter-spacing: -1px; padding-left: 25px}
+	.about-info ul li::before { content: ""; position: absolute; left: 5px; top: 13px; width: 5px; height: 5px; background: #4c4c4c; border-radius: 50%}
+	.about-info ul li:first-child { margin-bottom: 10px}
+
+	.player-con { width: 520px; padding-top: 140px}
+	.player-con video { width: 100%; max-width: 520px; height: auto; box-shadow: 3px 1px 77px rgba(0, 0, 0, 0.5); border-radius: 13px;}
+
+.about-key { position: relative}
+	.about-key ul li { position: relative; display: flex; align-items: center; justify-content: center}
+	.about-key ul li::before { z-index: -1}
+	.about-key ul li h3 { font-size: 26px; color: #fff; font-weight: 700; letter-spacing: -0.5px; text-align: center; margin-bottom: 5px}
+	.about-key ul li p { font-size: 15px; color: #fff; letter-spacing: -0.5px; line-height: 22px; font-weight: 300; text-align: center}
+
+	.about-key ul li.myroom { width: 340px; height: 340px; background: rgba(208, 19, 41, 0.7); border-radius: 50%; border: 2px dashed #fff; margin: 0 auto; z-index: 4}
+	.about-key ul li.myroom::before { content: ""; position: absolute; left: 50%; top: 50%; width: 400px; height: 400px; background: rgba(208, 19, 41, 0.25); border-radius: 50%; transform: translate(-50%, -50%);}
+
+	.about-key ul li.white { width: 310px; height: 310px; background: #fff; box-shadow: 2px 2px 78px rgba(0, 0, 0, 0.5); border-radius: 50%; z-index: 3}
+	.about-key ul li.white::before { content: ""; position: absolute; left: 50%; top: 50%; width: 330px; height: 330px; background: transparent; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 50%; transform: translate(-50%, -50%);}
+	.about-key ul li.white h3 { font-size: 24px; color: #464646}
+	.about-key ul li.white p { color: #464646}
+
+	.about-key ul li.incentive { position: absolute; left: 50%; top: 200px; margin-left: -390px}
+	.about-key ul li.mainnet { position: absolute; right: 50%; top: 200px; margin-right: -390px}
+	.about-key ul li.quickly { width: 1000px; height: 160px; margin: 150px auto 0 auto; background: #b31c2d; border-radius: 250px; z-index: 2}
+	.about-key ul li.quickly::before { content: ""; position: absolute; left: 50%; top: 50%; width: 1020px; height: 180px; background: transparent; border: 2px dashed rgba(255, 255, 255, 0.5); border-radius: 160px; transform: translate(-50%, -50%);}
+
+
+/*----------------------------------------
+Roadmap
+----------------------------------------*/
+#Roadmap { background: #fafafa}
+#Roadmap .section { align-items: flex-start; height: auto; padding: 300px 0 100px 0}
+.svg-line.roadmap1 { left: 50%; top: -60px; margin-left: -440px}
+
+#Roadmap .road-logo {
+    padding: 20px;
+    flex: 2;
+    position: relative;
+    text-align: right;
+}
+
+#Roadmap .road-logo::after {
+    content: "";
+    position: absolute;
+    right: -23px;
+    top: -20px;
+    width: 44px;
+    height: 44px;
+    background: url(../img/about_dot.png) 0 0 no-repeat;
+    animation: about-circle 0.5s 1.5s linear infinite alternate;
+    transform: scale(0);
+    opacity: 0;
+}
+
+#Roadmap h4{
+    font-family: 'Gmarket Sans';
+    font-size: 55px;
+    font-weight: 700;
+    color: #3c3c3c;
+    letter-spacing: -2.5px;
+    line-height: 61px;
+}
+
+#Roadmap h4 strong{
+    color: #d01329;
+    font-weight: 700;
+}
+
+#Roadmap .line {
+    width: 1px;
+    height: 1255px;
+    background-color: #d01329;
+}
+
+#Roadmap .road-list {
+    margin-top: 110px;
+    flex: 2;
+}
+
+#Roadmap .road-list li {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#Roadmap .road-list li::before {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    background-image: url(../img/road_bar.png);
+    margin-left: -30px;
+    margin-right: 38px;
+    margin-bottom: 5px;
+}
+
+#Roadmap .road-list strong {
+    font-size: 25px;
+    letter-spacing: -0.91px;
+    color: #4c4c4c;
+	font-weight: 700;
+}
+
+#Roadmap .road-list p {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+
+/*----------------------------------------
+Member
+----------------------------------------*/
+#Member { background: #d9d9d9;}
+#Member .section { height: auto; padding: 160px 0 90px}
+
+#Member .member-in { width: 1200px;}
+#Member h4 { margin: 0 auto 80px auto; width: 261px; position: relative; text-align: center; padding: 14px; font-family: 'Gmarket Sans'; font-size: 55px; font-weight: 700; color: #fff; letter-spacing: -2.5px; line-height: 61px; }
+#Member h4::after { content: ""; position: absolute; right: -54px; top: -30px; width: 44px; height: 44px; background: url(../img/about_dot.png) 0 0 no-repeat; animation: about-circle 0.5s 1.5s linear infinite alternate; transform: scale(0); opacity: 0;}
+#Member ul::after { content: ''; display: block; clear: both;}
+#Member li { float: left; width: 266px; position: relative; margin-right: 45px; margin-bottom: 70px;}
+#Member li:nth-child(4n) { margin-right: 0;}
+#Member li::after { content: ""; position: absolute; left: 18px; top: 4px; width: 22px; height: 22px; background: url(../img/member_smalldot.png) 0 0 no-repeat; animation: about-circle 0.5s 1.5s linear infinite alternate; transform: scale(0); opacity: 0;}
+#Member li img { vertical-align: bottom;}
+#Member li p { background-color: #fff; height: 223px; font-size: 15px; font-weight: 500; line-height: 1.67; letter-spacing: -0.43px; color: #7e7e7e; padding: 22px;}
+#Member li p span { letter-spacing: -0.38px;}
+
+
+/*----------------------------------------
+Partners
+----------------------------------------*/
+#Partners { background: #fafafa}
+.partners-box { margin-top: 0px}
+#Partners h4 { position: relative; margin: 0 auto; width: 319px; text-align: center; font-family: 'Gmarket Sans'; font-size: 55px; font-weight: 700; color: #3c3c3c; letter-spacing: -2.5px; line-height: 61px; padding: 14px; margin-bottom: 80px;}
+#Partners h4::after { content: ""; position: absolute; right: -64px; top: -30px; width: 44px; height: 44px; background: url(../img/about_dot.png) 0 0 no-repeat; animation: about-circle 0.5s 1.5s linear infinite alternate; transform: scale(0); opacity: 0;}
+#Partners ul { display: flex; justify-content: space-between; width: 1100px; margin: 0 auto;}
+#Partners li { text-align: center; color: #000; letter-spacing: -0.5px;}
+#Partners li strong { display: block; font-size: 20px; font-weight: 700; margin-bottom: 15px;}
+#Partners li p { font-size: 20px; line-height: 1.25; width: 180px; margin: 0 auto;}
+
+
+/*----------------------------------------
+Footer
+----------------------------------------*/
+.footer { text-align: center; background-color: #323232; padding: 40px 0}
+.footer img { display: block; width: 78px; margin: 0 auto 20px auto;}
+.footer .address { font-size: 16px; line-height: 1.75; letter-spacing: -0.58px; color: #fff;}
+
+
+
+
+

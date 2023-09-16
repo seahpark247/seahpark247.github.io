@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="161.31" height="401.67" viewBox="0 0 161.31 401.67">
+	 <defs>
+     	<style>
+		#Path_27 {
+		  stroke-dasharray: 530;
+		  stroke-dashoffset: 530;
+		  animation: about-line 1s linear forwards;
+		}
+		@keyframes about-line {
+		  from { stroke-dashoffset: 530; }
+		  to { stroke-dashoffset: 0; }
+		}
+		
+		#Oval {
+			cx:0; cy0; r:0;
+			animation: about-dot 0.2s 1s linear forwards;
+		}
+		@keyframes about-dot {
+			from { cx:0; cy0; r:0;}
+			to { cx:7.5; cy:7.5; r:7.5;}
+		}		
+		</style>
+	</defs>
+	<g id="gr1" data-name="gr1" transform="translate(-385.673 -1207.33)">
+		<circle id="Oval" cx="7.5" cy="7.5" r="7.5" transform="translate(464 1594)" fill="#d01329"/>
+		<path id="Path_27" data-name="Path 27" d="M90.14,0s180.28,92.8,0,180.6,0,210.4,0,210.4" transform="translate(376.187 1207.775)" fill="none" stroke="#d01329" stroke-miterlimit="10" stroke-width="1"/>
+	</g>
+</svg>

@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+section {
+    height: 100vh;
+}
+
+section#Roadmap,
+section#About {
+    height: 200vh;
+}
+
+#Main {
+    position: relative;
+    width: 75rem;
+    margin: 0 auto;
+}
+
+#Main select {
+    position: absolute;
+    top: 2.625rem;
+    right: 0;
+    width: 4.625rem;
+    height: 1.875rem;
+    font-size: 0.625rem;
+    font-weight: bold;
+    letter-spacing: -0.029rem;
+    color: #3b3b3b;
+    border: solid 0.063rem #3b3b3b;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../img/main_arrow.png) no-repeat 95% 50%;
+    padding: 0 0.938em;
+}
+
+#Main select:focus {
+    outline: none;
+}
+
+#Main select::-ms-expand {
+    display: none;
+}
+
+#Main .float {
+    height: 33.688rem;
+}
+
+#Main .float img {
+    display: block;
+    margin: 0 auto;
+}
+
+#Main .float img.item {
+    padding-top: 5.688rem;
+    margin-bottom: 2.5rem;
+    animation: motion 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes motion {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, 40px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(0, 54px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#Main .float img.shadow {
+    animation: scale 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.4);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.54);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#Main .main-content {
+    text-align: center;
+}
+
+#Main .main-content img {
+    width: 50rem;
+    margin-bottom: 1.25rem;
+}
+
+#Main .main-content h2 {
+    font-family: 'Gmarket Sans';
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: -0.086rem;
+    color: #3c3c3c;
+    margin-bottom: 2rem;
+}
+
+#Main .main-button {
+    width: 28.625rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 3.688em;
+}
+
+#Main .main-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4.063rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: -0.057rem;
+    color: #3b3b3b;
+    border: solid 0.063rem #3b3b3b;
+    box-sizing: border-box;
+}
+
+#Main .main-button>a:first-child {
+    margin-bottom: 1.25rem;
+}
+
+#Main .main-button h3 {
+    font-weight: bold;
+    margin-bottom: 0.938rem;
+}
+
+#Main ul.app {
+    display: flex;
+}
+
+#Main ul.app li a {
+    width: 10.4rem;
+}
+
+#Main ul.app li:first-child {
+    margin-right: 1.25rem;
+}
+
+#Main ul.app li:first-child a {
+    color: #d01329;
+    border: solid 0.063rem #d01329;
+}
+
+#Main ul.app li:first-child a::before {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.875rem;
+    background-repeat: no-repeat;
+    background-image: url(../img/main_android.png);
+    margin-right: 0.625rem;
+}
+
+#Main ul.app li:nth-child(2) a::before {
+    content: '';
+    display: inline-block;
+    width: 1.688rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-image: url(../img/main_ios.png);
+    margin-right: 0.563rem;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7.813rem;
+    background-color: #fff;
+    z-index: 5;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75rem;
+    height: 100%;
+    margin: 0 auto;
+}
+
+nav ul li {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: -0.057rem;
+    color: #3b3b3b;
+    padding: 0 1.1em;
+}
+
+nav ul li:first-child {
+    padding-left: 0;
+}
+
+nav ul li:last-child {
+    padding-right: 0;
+}
+
+nav ul li a {
+    padding: 2.3em 1.125em;
+}
+
+nav ul li a:hover:not(.nav-icon) {
+    color: #d01329;
+    border-bottom: 0.313rem solid #d01329;
+}
+
+#About {
+    background-color: cadetblue;
+}
+
+#Roadmap {
+    display: flex;
+    justify-content: space-between;
+    width: 75rem;
+    margin: 0 auto;
+    padding-top: calc(7.813rem + 200px);
+}
+
+#Roadmap .road-logo {
+    padding: 20px;
+    flex: 2;
+    position: relative;
+    text-align: right;
+}
+
+#Roadmap .road-logo::after {
+    content: "";
+    position: absolute;
+    right: -23px;
+    top: -20px;
+    width: 44px;
+    height: 44px;
+    background: url(../img/about_dot.png) 0 0 no-repeat;
+    animation: about-circle 0.5s 1.5s linear infinite alternate;
+    transform: scale(0);
+    opacity: 0;
+}
+
+@keyframes about-circle {
+    from {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+#Roadmap h4{
+    font-family: 'Gmarket Sans';
+    font-size: 55px;
+    font-weight: 700;
+    color: #3c3c3c;
+    letter-spacing: -2.5px;
+    line-height: 61px;
+}
+
+#Roadmap h4 strong{
+    color: #d01329;
+    font-weight: 700;
+}
+
+
+#Roadmap .line {
+    width: 1px;
+    height: 1300px;
+    background-color: #d01329;
+}
+
+#Roadmap .road-list {
+    margin-top: 110px;
+    flex: 2;
+}
+
+#Roadmap .road-list li {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#Roadmap .road-list li::before {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    background-image: url(../img/road_bar.png);
+    margin-left: -30px;
+    margin-right: 38px;
+    margin-bottom: 5px;
+}
+
+#Roadmap .road-list strong {
+    font-size: 25px;
+    letter-spacing: -0.91px;
+    color: #4c4c4c;
+}
+
+#Roadmap .road-list p {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+
+#Member { background-color: darksalmon;}
+#Member { height: 164vh; padding-top: 200px; background-color: #d9d9d9;}
+#Member .member-in { width: 1200px; margin: 0 auto;}
+#Member h4 { margin: 0 auto; width: 261px; position: relative; text-align: center; padding: 14px; margin-bottom: 80px; font-family: 'Gmarket Sans'; font-size: 55px; font-weight: 700; color: #fff; letter-spacing: -2.5px; line-height: 61px; padding: 14px; margin-bottom: 80px;}
+#Member h4::after { content: ""; position: absolute; right: -54px; top: -30px; width: 44px; height: 44px; background: url(../img/about_dot.png) 0 0 no-repeat; animation: about-circle 0.5s 1.5s linear infinite alternate; transform: scale(0); opacity: 0;}
+#Member ul::after { content: ''; display: block; clear: both;}
+#Member li { float: left; width: 266px; position: relative; margin-right: 45px; margin-bottom: 73px;}
+#Member li:nth-child(4n) { margin-right: 0;}
+#Member li::after { content: ""; position: absolute; left: 18px; top: 4px; width: 22px; height: 22px; background: url(../img/member_smalldot.png) 0 0 no-repeat; animation: about-circle 0.5s 1.5s linear infinite alternate; transform: scale(0); opacity: 0;}
+#Member li img { vertical-align: bottom;}
+#Member li p { background-color: #fff; height: 223px; font-size: 15px; font-weight: 500; line-height: 1.67; letter-spacing: -0.43px; color: #7e7e7e; padding: 22px;}
+#Member li p span { letter-spacing: -0.38px;}
+
+#Partners { padding-top: 200px;}
+#Partners h4 { position: relative; margin: 0 auto; width: 319px; text-align: center; font-family: 'Gmarket Sans'; font-size: 55px; font-weight: 700; color: #3c3c3c; letter-spacing: -2.5px; line-height: 61px; padding: 14px; margin-bottom: 80px;}
+#Partners h4::after { content: ""; position: absolute; right: -64px; top: -30px; width: 44px; height: 44px; background: url(../img/about_dot.png) 0 0 no-repeat; animation: about-circle 0.5s 1.5s linear infinite alternate; transform: scale(0); opacity: 0;}
+#Partners ul { display: flex; justify-content: space-between; width: 1100px; margin: 0 auto;}
+#Partners li { text-align: center;}
+#Partners li strong { display: block; font-size: 20px; margin-bottom: 15px;}
+#Partners li p { font-size: 20px; line-height: 1.25; width: 180px; margin: 0 auto;}
+
+footer { text-align: center; height: 200px; background-color: #323232;}
+footer img { width: 78px; padding: 40px 0 20px 0;}
+footer address { font-size: 16px; line-height: 1.75; letter-spacing: -0.58px; color: #fff;}

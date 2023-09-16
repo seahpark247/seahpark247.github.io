@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.png" type="image/x-icon" />
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Title -->
+    <title>SMARTWORK</title>
+    <style>
+        .navbar-nav li:nth-child(4) a {
+            color: #335EEA !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom"></nav>
+    <!-- CONTENT -->
+    <section>
+        <!-- Content -->
+        <div class="container d-flex flex-column">
+            <div class="row align-items-center justify-content-between gx-0 min-vh-100">
+                <div class="col-12 col-md-5 align-self-stretch">
+                    <!-- Image (mobile) -->
+                    <img src="assets/img/samwoo/contact.png" class="d-md-none img-cover" alt="...">
+                    <!-- Image -->
+                    <div class="d-none d-md-block vw-50 h-100 float-right bg-cover"
+                        style="background-image: url(assets/img/samwoo/contact.png);"></div>
+                </div>
+                <div class="col-12 col-md-6 py-8" style="padding-top:13% !important;">
+                    <!-- Heading -->
+                    <h2 class="font-weight-bold text-center mb-2">
+                        Contact Us.
+                    </h2>
+                    <!-- Text -->
+                    <p class="font-size-lg text-center text-muted mb-0">
+                        삼우이머션은 귀하의 제안을 환영합니다.<br>
+                        당사와 협력관계 및 협업관계가 필요하거나<br>
+                        당사의 서비스를 도입하시려면 언제든 문의바랍니다.
+                    </p>
+                    <!-- Divider -->
+                    <hr class="hr-sm my-6 my-md-8 mx-auto bg-gray-300">
+                    <!-- Form -->
+                    <form>
+                        <div class="form-group mb-5">
+                            <!-- Label -->
+                            <label class="form-label" for="contactName">
+                                Full name
+                            </label>
+                            <!-- Input -->
+                            <input class="form-control" id="contactName" type="text" placeholder="Full name">
+                        </div>
+                        <div class="form-group mb-5">
+                            <!-- Label -->
+                            <label class="form-label" for="contactEmail">
+                                Email
+                            </label>
+                            <!-- Input -->
+                            <input class="form-control" id="contactEmail" type="email" placeholder="email@domain.com">
+                        </div>
+                        <div class="form-group mb-5 d-none">
+                            <!-- Label -->
+                            <label for="contactMessage">
+                                What can we help you with?
+                            </label>
+                            <!-- Input -->
+                            <textarea class="form-control" id="contactMessage" rows="5"
+                                placeholder="Tell us what we can help you with!"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group mb-7 mb-md-9">
+                                    <!-- Label -->
+                                    <label class="form-label" for="contactMessage">
+                                        Comments
+                                    </label>
+                                    <!-- Input -->
+                                    <textarea class="form-control" id="contactMessage" rows="5"
+                                        placeholder="문의하실 내용을 적어주세요 :)"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / .row -->
+                        <div class="form-group mb-0">
+                            <!-- Submit -->
+                            <a href="#!" class="btn btn-block btn-primary lift">
+                                메일 전송하기
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- / .row -->
+        </div>
+    </section>
+    <!-- JAVASCRIPT -->
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

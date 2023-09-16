@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="73" viewBox="0 0 224 73">
+    <defs>
+        <filter id="laq2ahczma" width="131.9%" height="306.9%" x="-16%" y="-103.4%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-opacity=".25" fill-rule="evenodd">
+        <g fill="#6E6E6E">
+            <g transform="translate(-838.000000, -491.000000) translate(838.000000, 491.000000)">
+                <ellipse cx="112" cy="36.5" filter="url(#laq2ahczma)" rx="94" ry="14.5"/>
+            </g>
+        </g>
+    </g>
+</svg>
