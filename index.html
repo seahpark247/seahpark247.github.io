@@ -7,8 +7,18 @@
 	<link rel="shortcut icon" href="favicon.png">
 
     <title>Seah Park - Portfolio</title>
-	<meta name="description" content="Full-Stack Software Engineer Seah's Portfolio" />
-	<meta name="keywords" content="bootstrap, bootstrap4" />
+	<meta name="description" content="Full-Stack Software Engineer building production systems for healthcare, workflow automation, and internal platforms. Stack: .NET/C#, React, Grails, SQL, AWS." />
+	<meta name="keywords" content="Seah Park, Software Engineer, Full-Stack Developer, .NET, C#, React, Grails, Java, Groovy, AWS, Healthcare Software" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://seahpark247.github.io/" />
+	<meta property="og:title" content="Seah Park | Full-Stack Software Engineer" />
+	<meta property="og:description" content="I build and ship production systems for healthcare, workflow automation, and internal platforms. Stack: .NET/C#, React, Grails, SQL, AWS." />
+	<meta property="og:image" content="https://seahpark247.github.io/images/profile.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Seah Park | Full-Stack Software Engineer" />
+	<meta name="twitter:description" content="I build and ship production systems for healthcare, workflow automation, and internal platforms. Stack: .NET/C#, React, Grails, SQL, AWS." />
+	<meta name="twitter:image" content="https://seahpark247.github.io/images/profile.png" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,63 +27,128 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<link rel="stylesheet" href="css/daterangepicker.css">
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		/* Tech Stack as wrapping pills: resilient to long/multi-word labels on mobile */
+		.tech-stack {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			padding-left: 0;
+			margin-top: 10px;
+		}
+		.tech-stack li {
+			display: inline-block;
+			padding: 6px 14px;
+			background: #bdbebf;
+			color: #1A374D;
+			border-radius: 999px;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 1.2;
+			white-space: nowrap;
+		}
+		/* Portfolio cards: framed image + hover CTA overlay, caption below */
+		.owl-3-slider .media-thumb {
+			position: relative;
+			display: block;
+			border: 6px solid #000;
+			border-radius: 12px;
+			overflow: hidden;
+		}
+		.owl-3-slider .media-thumb img { display: block; width: 100%; transform: none; }
+		.owl-3-slider .media-thumb:hover img { transform: none; }
+		.owl-3-slider .media-thumb:hover:after { opacity: 1; visibility: visible; }
+		.owl-3-slider .card-cta {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+			opacity: 0;
+			transition: .25s all ease;
+			background: #fff;
+			color: #1A374D;
+			font-weight: 700;
+			font-size: .9rem;
+			padding: 10px 18px;
+			border-radius: 999px;
+			white-space: nowrap;
+			box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+		}
+		.owl-3-slider .media-thumb:hover .card-cta { opacity: 1; }
+		/* Touch devices have no hover: keep the CTA visible */
+		@media (hover: none) {
+			.owl-3-slider .card-cta { opacity: 1; }
+		}
+		/* caption below image, always visible */
+		.owl-3-slider .item .media-text {
+			position: static;
+			opacity: 1;
+			visibility: visible;
+			margin: 14px 4px 0;
+			padding: 0;
+			text-align: left;
+		}
+		.owl-3-slider .item .media-text h3 { font-size: 1rem; font-weight: 900; color: #1A374D; margin: 0; }
+		.owl-3-slider .item .media-text .location { font-size: .8rem; color: rgba(26,55,77,.6); display: block; margin-top: 3px; }
+		/* Clickable testimonial avatars (link to LinkedIn) */
+		.testimonial .img-wrap a {
+			display: inline-block;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: transform .18s ease;
+		}
+		.testimonial .img-wrap a img { transition: box-shadow .18s ease; }
+		.testimonial .img-wrap a:hover { transform: translateY(-3px); }
+		.testimonial .img-wrap a:hover img { box-shadow: 0 7px 18px rgba(0, 0, 0, 0.3); }
+		.testimonial .img-wrap a:active { transform: translateY(1px) scale(0.95); }   /* pressed-in feel */
+	</style>
 </head>
 
 <body>
-	<!-- <div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close">
-				<span class="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div> -->
 	
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
 				<a href="index.html" class="logo m-0">Seah Park <span class="text-primary">.</span></a>
 
-				<!-- <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-					<li class="active"><a href="index.html">Home</a></li>
-				</ul> -->
-
 				<a href="mailto:seahpark247@gmail.com" class="ml-auto float-right btn btn-outline-white text-white btn-md font-weight-bold" style="cursor: pointer;">Get in touch</a>
 			</div>
 		</div>
 	</nav>
-
 
 	<div class="hero">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-7">
 					<div class="intro-wrap">
-						<h1 class="mb-5"><span class="d-block">with Seah Park</span> Elevate Your <span class="typed-words"></span></h1>
+						<h1 class="mb-4"><span class="d-block">Hi, I'm Seah Park</span> I build &amp; ship <span class="typed-words"></span></h1>
+						<p class="mb-4 lead">Full-Stack Software Engineer: .NET/C#, React, Grails, SQL, AWS. I design and deploy production systems for healthcare, workflow automation, and internal business platforms.</p>
+						<p class="mb-0">
+							<a href="https://github.com/seahpark247" target="_blank" rel="noopener" class="btn btn-primary btn-md font-weight-bold" style="margin-bottom: 10px;">View GitHub</a>
+						</p>
 					</div>
 				</div>
 				<div class="col-lg-5">
 					<div class="">
-						<img src="images/profile.png" alt="Image" class="img-fluid active">
+						<img src="images/profile.png" alt="Seah Park" class="img-fluid active">
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-
 	<div class="untree_co-section">
 		<div class="container">
 			<div class="row mb-5 justify-content-center">
 				<div class="col-lg-6 text-center">
 					<h2 class="section-title text-center mb-3">About Me</h2>
-					<p>Full-Stack Software Engineer, who connects unclear dots and solves real-world problems, and makes the client's money flow.<p>
+					<p>Full-Stack Software Engineer building production systems for healthcare, workflow automation, and internal business platforms. I focus on scalable backend architecture and shipping software that real teams use every day.</p>
 				</div>
 			</div>
 			<div class="row align-items-stretch">
@@ -81,8 +156,8 @@
 					<div class="feature-1 d-md-flex">
 						<div class="align-self-center">
 							<span class="flaticon-house display-4 text-primary"></span>
-							<h3>Willing to Relocate</h3>
-							<p class="mb-0">On-site/Remote flexible</p>
+							<h3>Production Experience</h3>
+							<p class="mb-0">HIPAA healthcare &amp; multi-store retail platforms, shipped to real users</p>
 						</div>
 					</div>
 				</div>
@@ -91,8 +166,8 @@
 					<div class="feature-1 d-md-flex">
 						<div class="align-self-center">
 							<span class="flaticon-mail display-4 text-primary"></span>
-							<h3>Validated Candidate</h3>
-							<p class="mb-0">Master of Computer Science at Texas A&M</p>
+							<h3>M.S. Computer Science</h3>
+							<p class="mb-0">Texas A&amp;M University, GPA 3.8 / 4.0</p>
 						</div>
 					</div>
 				</div>
@@ -100,18 +175,18 @@
 				<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
 					<div class="feature-1 d-md-flex">
 						<div class="align-self-center">
-							<h3>Tech Stacks</h3>
-							<ul class="list-unstyled two-col clearfix">
-								<li>Swift</li>
-								<li>SwiftUI</li>
-								<li>Javascript</li>
+							<h3>Tech Stack</h3>
+							<ul class="list-unstyled tech-stack">
+								<li>.NET / C#</li>
+								<li>Java / Groovy</li>
+								<li>Grails</li>
 								<li>React</li>
+								<li>JavaScript</li>
 								<li>AWS</li>
-								<li>Firebase</li>
-								<li>Xcode</li>
-								<li>Github</li>
-								<li>HTML</li>
-								<li>CSS</li>
+								<li>PostgreSQL</li>
+								<li>Docker</li>
+								<li>Swift</li>
+								<li>Git</li>
 							</ul>
 						</div>
 					</div>
@@ -129,51 +204,42 @@
 			<div class="owl-carousel owl-3-slider">
 
 				<div class="item">
-					<a class="media-thumb" href="images/port1.png" data-fancybox="gallery" style="border: 10px solid #000">
-						<div class="media-text">
-							<h3>Tip Splitting App</h3>
-							<!-- <span class="location"></span> -->
-						</div>
-						<img src="images/port1.png" alt="Image" class="img-fluid">
-					</a> 
+					<a class="media-thumb" href="https://zelifkudos.ddnsking.com/demo" target="_blank" rel="noopener">
+						<img src="images/zelifkudos.png" alt="ZelifKudos peer-recognition platform" class="img-fluid">
+						<span class="card-cta">View Live Demo ↗</span>
+					</a>
+					<div class="media-text">
+						<h3>ZelifKudos: Live Production App</h3>
+						<span class="location">Grails · PostgreSQL · WebSocket · Quartz · Docker · 93% team adoption</span>
+					</div>
 				</div>
 
 				<div class="item">
-					<a class="media-thumb" href="images/port2.png" data-fancybox="gallery" style="border: 10px solid #000">
-						<div class="media-text">
-							<h3>Flag Quiz App</h3>
-							<!-- <span class="location"></span> -->
-						</div>
-						<img src="images/port2.png" alt="Image" class="img-fluid">
-					</a> 
+					<a class="media-thumb" href="https://github.com/seahpark247/GoalChaser" target="_blank" rel="noopener">
+						<img src="images/goalchaser.jpg" alt="GoalChaser habit-tracking iOS app" class="img-fluid">
+						<span class="card-cta">View on GitHub ↗</span>
+					</a>
+					<div class="media-text">
+						<h3>GoalChaser: iOS Habit Tracker</h3>
+						<span class="location">Swift · SwiftUI · Firebase · +30% beta engagement</span>
+					</div>
 				</div>
 
 				<div class="item">
-					<a class="media-thumb" href="images/port3.png" data-fancybox="gallery" style="border: 10px solid #000">
-						<div class="media-text">
-							<h3>View Modifier Samples</h3>
-							<!-- <span class="location"></span> -->
-						</div>
-						<img src="images/port3.png" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-
-				<div class="item">
-					<a class="media-thumb" href="images/port4.png" data-fancybox="gallery" style="border: 10px solid #000">
-						<div class="media-text">
-							<h3>TicTacToe Game App</h3>
-							<!-- <span class="location"></span> -->
-						</div>
-						<img src="images/port4.png" alt="Image" class="img-fluid">
-					</a> 
+					<a class="media-thumb" href="https://github.com/seahpark247/iKnowTheColor" target="_blank" rel="noopener">
+						<img src="images/iknowthecolor.jpg" alt="iKnowTheColor accessibility iOS app" class="img-fluid">
+						<span class="card-cta">View on GitHub ↗</span>
+					</a>
+					<div class="media-text">
+						<h3>iKnowTheColor: Accessibility iOS App</h3>
+						<span class="location">Swift · SwiftUI · CoreML · AVFoundation · +20% color accuracy</span>
+					</div>
 				</div>
 
 			</div>
 
 		</div>
 	</div>
-
 
 	<div class="untree_co-section testimonial-section mt-5">
 		<div class="container">
@@ -184,7 +250,7 @@
 					<div class="owl-single owl-carousel no-nav">
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
-								<img src="images/drliu.jpeg" alt="Image" class="img-fluid">
+								<a href="https://www.linkedin.com/in/ting-liu-96b8a1178/" target="_blank" rel="noopener"><img src="images/drliu.jpeg" alt="Dr. Ting Liu" class="img-fluid"></a>
 							</figure>
 							<h3 class="name">Dr. Ting Liu</h3>
 							<blockquote>
@@ -195,7 +261,7 @@
 
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
-								<img src="images/irma.jpeg" alt="Image" class="img-fluid">
+								<a href="https://www.linkedin.com/in/irma-nate-mba-6a65121a4/" target="_blank" rel="noopener"><img src="images/irma.jpeg" alt="Irma Nate" class="img-fluid"></a>
 							</figure>
 							<h3 class="name">Irma Nate</h3>
 							<blockquote>
@@ -206,11 +272,11 @@
 
 						<div class="testimonial mx-auto">
 							<figure class="img-wrap">
-								<!-- <img src="images/irma.jpeg" alt="Image" class="img-fluid"> -->
+								<img src="images/taegyu.jpeg" alt="Taegyu Han" class="img-fluid">
 							</figure>
 							<h3 class="name">Taegyu Han</h3>
 							<blockquote>
-								<span style="color: #999">(Database Engineer, Austin Google)</span>
+								<span style="color: #999">(Database Engineer, Google)</span>
 								<p>&ldquo;I've had the privilege of watching her growth as a developer. Her passion, honesty, and technical skills are truly impressive. Her dedication and innovative approach to problem-solving make her an asset to any team.&rdquo;</p>
 							</blockquote>
 						</div>
@@ -222,119 +288,12 @@
 		</div>
 	</div>
 
-<!-- Portfolio sub -->
-	<!-- <div class="untree_co-section">
-		<div class="container">
-			<div class="row justify-content-center text-center mb-5">
-				<div class="col-lg-6">
-					<h2 class="section-title text-center mb-3">Portfolios</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Italy</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3><a href="#">Rialto Mountains</a></h3>
-								<div class="price ml-auto">
-									<span>$520.00</span>
-								</div>
-							</div>
-							
-						</div>
-						
-					</div>
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>United States</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3><a href="#">San Francisco</a></h3>
-								<div class="price ml-auto">
-									<span>$520.00</span>
-								</div>
-							</div>
-							
-						</div>
-						
-					</div>
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Malaysia</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3><a href="#">Perhentian Islands</a></h3>
-								<div class="price ml-auto">
-									<span>$750.00</span>
-								</div>
-							</div>
-							
-						</div>
-						
-					</div>
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid"></a>
-
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Switzerland</span>
-						</span>
-
-						<div class="d-flex align-items-center">
-							<div>
-								<h3><a href="#">Lake Thun</a></h3>
-								<div class="price ml-auto">
-									<span>$520.00</span>
-								</div>
-							</div>
-							
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- <div class="untree_co-section">
-		<div class="container">
-			<div class="row justify-content-between align-items-center">
-				<div class="col-lg-6">
-					<figure class="img-play-video">
-						<a id="play-video" class="video-play-button" href="https://www.youtube.com/watch?v=mwtbEGNABWU" data-fancybox>
-							<span></span>
-						</a>
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid rounded-20">
-					</figure>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 	<div class="py-5 cta-section">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-md-12">
-					<h2 class="mb-2 text-white">Elevate Your Comapny. Contact Seah Now</h2>
-					<p class="mb-4 lead text-white text-white-opacity">At my first job, I transformed company revenue from $500 to $30,000 in a month.</p>
+					<h2 class="mb-2 text-white">Let's build something that ships.</h2>
+					<p class="mb-4 lead text-white text-white-opacity">I build production systems that real teams use; my latest is live at 93% adoption. Let's talk about what we can ship together.</p>
 					<p class="mb-0"><a href="mailto:seahpark247@gmail.com" class="btn btn-outline-white text-white btn-md font-weight-bold" style="cursor: pointer;">Get in touch</a></p>
 				</div>
 			</div>
@@ -352,8 +311,8 @@
 					<div class="col-md-6 col-lg-2">
 						<div class="widget">
 							<ul class="list-unstyled social">
-								<li><a href="https://www.linkedin.com/in/seahpark/"><span class="icon-linkedin"></span></a></li>
-								<li><a href="https://x.com/ilovetodoswift"><span class="icon-twitter"></span></a></li>
+								<li><a href="https://www.linkedin.com/in/seahpark/" target="_blank" rel="noopener"><span class="icon-linkedin"></span></a></li>
+								<li><a href="https://github.com/seahpark247" target="_blank" rel="noopener"><span class="icon-github"></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -362,7 +321,7 @@
 							<h3 class="heading">Contact</h3>
 							<ul class="list-unstyled quick-info links">
 								<li class="email"><a href="mailto:seahpark247@gmail.com" style="cursor: pointer;">seahpark247@gmail.com</a></li>
-								<li class="address"><a style="text-decoration: none; cursor: default;">San Antonio, Texas</a></li>
+								<li class="address"><a style="text-decoration: none; cursor: default;">Open to Relocate · Remote-friendly</a></li>
 							</ul>
 						</div>
 					</div>
@@ -370,19 +329,6 @@
 			</div>
 		</div>
 
-		<!-- <div class="inner dark">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
-						<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; 
-							Designed with love by <a href="https://untree.co" class="link-highlight">Untree.co</a>
-							License information: https://untree.co/license/
-						</p>
-					</div>
-					
-				</div>
-			</div>
-		</div> -->
 	</div>
 
 	<div id="overlayer"></div>
@@ -398,10 +344,7 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/aos.js"></script>
-	<script src="js/moment.min.js"></script>
-	<script src="js/daterangepicker.js"></script>
 
 	<script src="js/typed.js"></script>
 	<script>
@@ -414,7 +357,7 @@
 			})
 
 			var typed = new Typed('.typed-words', {
-				strings: ["Company"," Business"," Brand", " Success", " Value"],
+				strings: ["Production Systems", "Healthcare Software", "Live Products", "Scalable Backends"],
 				typeSpeed: 80,
 				backSpeed: 80,
 				backDelay: 4000,
@@ -423,7 +366,6 @@
 				showCursor: true,
 				preStringTyped: (arrayPos, self) => {
 					arrayPos++;
-					console.log(arrayPos);
 					$('.slides img').removeClass('active');
 					$('.slides img[data-id="'+arrayPos+'"]').addClass('active');
 				}
