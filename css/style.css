@@ -549,15 +549,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 .hero {
   padding: 7rem 0 10rem 0;
-  background: #6998AB;
-  margin-bottom: 100px; }
+  background: linear-gradient(-45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 100%), url('../images/profile.jpg');
+  background-size: cover;
+  background-position: center left;
+  background-attachment: fixed;
+  margin-bottom: 100px;
+  position: relative; }
   .hero.hero-inner {
     padding: 9rem 0 7rem 0;
     margin-bottom: auto;
     background: #1A374D; }
   .hero h1 {
     color: #ffffff;
-    font-size: 60px; }
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
     @media (max-width: 991.98px) {
       .hero h1 {
         font-size: 45px; } }
@@ -573,9 +578,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         content: ""; }
   .hero .intro-wrap {
     position: relative;
-    z-index: 1; }
+    z-index: 2;
+    max-width: 600px; }
   .hero .slides {
-    background: #ffffff;
+    display: none;
     max-width: 800px;
     left: -100px;
     z-index: 0;

@@ -33,6 +33,60 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<style>
+		/* Hero Custom Styles */
+		.hero-main-title {
+			font-size: 4rem;
+			font-weight: 700;
+			line-height: 1.2;
+		}
+		.hero-description {
+			font-size: 1.4rem;
+			color: rgba(255,255,255,0.9);
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+		}
+		.btn-hero {
+			background: linear-gradient(45deg, #6998AB, #4A90A4);
+			border: none;
+			color: white;
+			padding: 15px 30px;
+			box-shadow: 0 4px 15px rgba(105,152,171,0.3);
+			transition: all 0.3s ease;
+		}
+		.btn-hero:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(105,152,171,0.4);
+			color: white;
+		}
+		.btn-outline-light {
+			border: 2px solid rgba(255,255,255,0.8);
+			color: rgba(255,255,255,0.9);
+			padding: 13px 30px;
+			transition: all 0.3s ease;
+		}
+		.btn-outline-light:hover {
+			background: rgba(255,255,255,0.1);
+			border-color: white;
+			color: white;
+			transform: translateY(-2px);
+		}
+		.min-vh-50 {
+			min-height: 100vh;
+		}
+		@media (max-width: 768px) {
+			.hero-main-title {
+				font-size: 2.5rem;
+			}
+			.hero-description {
+				font-size: 1.1rem;
+			}
+			.btn-hero, .btn-outline-light {
+				padding: 12px 24px;
+				margin-bottom: 10px;
+			}
+			.intro-wrap {
+				text-align: center !important;
+			}
+		}
 		/* Tech Stack as wrapping pills: resilient to long/multi-word labels on mobile */
 		.tech-stack {
 			display: flex;
@@ -125,19 +179,15 @@
 
 	<div class="hero">
 		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-7">
-					<div class="intro-wrap">
-						<h1 class="mb-4"><span class="d-block">Hi, I'm Seah Park</span> I build &amp; ship <span class="typed-words"></span></h1>
-						<p class="mb-4 lead">Full-Stack Software Engineer: .NET/C#, React, Grails, SQL, AWS. I design and deploy production systems for healthcare, workflow automation, and internal business platforms.</p>
+			<div class="row align-items-center" style="height: calc(100vh - 89px); width: 100vw;">
+				<div class="col-lg-5 offset-lg-3" style="margin-top: -120px;">
+					<div class="intro-wrap text-end">
+						<h1 class="mb-4 hero-main-title">I build &amp; ship<br><span class="typed-words"></span></h1>
+						<p class="mb-4 lead hero-description">Full-Stack Software Engineer specializing in .NET/C#, React, Grails, SQL, and AWS. I design and deploy production systems for healthcare, workflow automation, and internal business platforms.</p>
 						<p class="mb-0">
-							<a href="https://github.com/seahpark247" target="_blank" rel="noopener" class="btn btn-primary btn-md font-weight-bold" style="margin-bottom: 10px;">View GitHub</a>
+							<a href="#portfolios" class="btn btn-hero btn-lg font-weight-bold mr-2">View My Work</a>
+							<a href="https://github.com/seahpark247" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg font-weight-bold">GitHub</a>
 						</p>
-					</div>
-				</div>
-				<div class="col-lg-5">
-					<div>
-						<img src="images/profile.jpg" alt="Seah Park" class="img-fluid active">
 					</div>
 				</div>
 			</div>
@@ -196,7 +246,7 @@
 		</div>
 	</div>
 
-	<div class="untree_co-section">
+	<div class="untree_co-section" id="portfolios">
 		<div class="container">
 			<div class="row text-center justify-content-center mb-5">
 				<div class="col-lg-7"><h2 class="section-title text-center">Portfolios</h2></div>
