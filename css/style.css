@@ -550,11 +550,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .hero {
   padding: 7rem 0 10rem 0;
   background: linear-gradient(-45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.2) 100%), url('../images/profile.jpg');
-  background-size: cover;
-  background-position: center left;
-  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: left center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
   margin-bottom: 100px;
   position: relative; }
+  @media (min-width: 992px) {
+    .hero {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center left; } }
+  @media (max-width: 991.98px) {
+    .hero {
+      background-size: auto 100%;
+      background-position: left center;
+      background-attachment: scroll; } }
   .hero.hero-inner {
     padding: 9rem 0 7rem 0;
     margin-bottom: auto;
